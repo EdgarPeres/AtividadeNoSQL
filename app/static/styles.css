@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #ffff;
+}
+
+h1, h2 {
+    color: #373535;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+.InputSearch {
+ box-shadow: inset #373535 0 0 0 2px;
+ border: 0;
+ background: rgba(0, 0, 0, 0);
+ appearance: none;
+ width:30%;
+ position: relative;
+ border-radius: 10px;
+ padding: 9px 12px;
+ line-height: 1.4;
+ color: rgb(0, 0, 0);
+ font-size: 16px;
+ font-weight: 400;
+ height: 25px;
+
+}
+
+.InputSearch:hover {
+    transition: all .20s ease;
+    box-shadow: 0 0 0 0 #fff inset, #1287B1 0 0 0 2px;
+}
+
+.InputSearch:focus{
+     background: #fff;
+     outline: 0;
+     box-shadow: 0 0 0 0 #fff inset, #1287B1 0 0 0 2px;
+}
+
+
+
+
+.ButtonPrimary {
+display: inline-block;
+outline: 0;
+cursor: pointer;
+border: none;
+padding: 0 40px;
+height: 40px;
+line-height: 40px;
+border-radius: 7px;
+background-color: #1287B1;
+color: white;
+font-weight: 400;
+font-size: 16px;
+transition: transform 0.2s;
+}
+
+.ButtonPrimary:hover{
+   transform: scale(1.05);
+ }
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 0px auto;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: #1287B1;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #D3EFFC;
+}
+
+th:nth-child(1), td:nth-child(1) {
+    width: 50px;
+}
+
+th:nth-child(3), td:nth-child(3) {
+    width: 70px;
+}
+
+
+/* Estilo para o botão de remover */
+td a {
+text-decoration: none;
+ outline: 0;
+ display: inline-block;
+ cursor: pointer;
+ border-radius: 7px;
+ border: 2px solid #1287B1;
+ color: #1287B1;
+ background: 0 0;
+ padding: 8px;
+ box-shadow: rgba(0, 0, 0, 0.10) 0px 2px 4px 0px, rgba(0, 0, 0, 0.10) 0px 1px 1.5px 0px;
+ font-weight: 400;
+ font-size: 15px;
+ height: 20px;
+}
+
+td a:hover {
+    background-color: #1287B1;
+    color: #fff;
+}
+
+img {
+width: 18%;
+}
+
+.row_flex{
+   display:flex;
+   flex-direction: row;
+   align-itens: center;
+   justify-content:center;
+}
+
+

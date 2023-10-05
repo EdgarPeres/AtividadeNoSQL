@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gerenciador de Tarefas</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+<a class="row_flex" href="https://cassandra.apache.org/_/index.html">
+    <img src="{{ url_for('static', filename='images/CassandraDB_Logo.png') }}">
+</a>
+
+<h1>Gerenciador de Tarefas</h1>
+<form method="post" action="{{ url_for('task_routes.add_task') }}">
+    <input class="InputSearch" type="text" name="task_description" placeholder="Descrição da Tarefa" required>
+    <button class="ButtonPrimary" type="submit">Adicionar</button>
+</form>
+
+<h2>Tarefas:</h2>
+<table border="1">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Descrição</th>
+        <th>Ação</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for task in tasks %}
+    <tr>
+        <td>{{ task["id"] }}</td>
+        <td>{{ task["description"] }}</td>
+        <td><a href="{{ url_for('task_routes.delete_task', task_id=task.id) }}">Remover</a></td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+
+<ul>
+    {% for task in tasks %}
+    <li>{{ task.description }}
+        <form method="post" action="{{ url_for('task_routes.delete_task', task_id=task.id) }}">
+            <button type="submit">Excluir</button>
+        </form>
+    </li>
+    {% endfor %}
+</ul>
+
+
+</body>
+</html>
